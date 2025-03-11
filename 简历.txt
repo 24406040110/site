@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <h1>My Resume</h1>
+    <table border="1">
+        <tr>
+            <td><strong>Name:</strong></td>
+            <td>John Doe</td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td>johndoe@example.com</td>
+        </tr>
+        <tr>
+            <td><strong>Phone:</strong></td>
+            <td>(123) 456-7890</td>
+        </tr>
+    </table>
+</body>
+</html>
