@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+@keyframes fly {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 0px;
+    }
+}
+.circle {
+    border-radius: 50px;
+    position: absolute;
+}
+</style>
+<script>
+    for (let i = 0; i < 10; i++) {
+        let b = document.createElement('div');
+        b.className = 'circle';
+        b.id = `b${i + 1}`;
+        b.style.left = `${20 + (i * 50)}px`; 
+        b.style.top = '400px';
+        b.style.animation = 'fly 10s 1';
+        document.body.appendChild(b);
+    }
+
+ 
+    function resizeBalloon() {
+        const balloons = document.querySelectorAll('.circle');
+        balloons.forEach((balloon) => {
+            const randomWidth = Math.random() * 50 + 50;
+            const randomHeight = Math.random() * 50 + 50;
+            balloon.style.width = `${randomWidth}px`;
+            balloon.style.height = `${randomHeight}px`;
+        });
+    }
+    setInterval(resizeBalloon, 2000);
+
+    function changeColor() {
+        const balloons = document.querySelectorAll('.circle');
+        const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+        balloons.forEach((balloon) => {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            balloon.style.backgroundColor = colors[randomIndex];
+        });
+    }
+    setInterval(changeColor, 3000);
+</script>
+
+</body>
+</html>
